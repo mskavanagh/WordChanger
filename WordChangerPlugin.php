@@ -36,8 +36,8 @@ class WordChangerPlugin extends Plugin
 				return true;
 			}
 			foreach(self::settings("wordlist") as $key => $value){
-				$origContent = str_replace($key, $value, $origContent);
-				$origRendered = str_replace($key, $value, $origRendered);
+				$origContent = preg_replace("/\b$key\b/", $value, $origContent);
+				$origRendered = preg_replace("/\b$key\b/", $value, $origRendered);
 			}
 			$notice->content = $origContent;
 			$notice->rendered = $origRendered;
