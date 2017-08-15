@@ -1,7 +1,6 @@
 # WordChanger
 
-Change words in user notices before they are posted.
-
+Notice: This is for the Qvitter GNU Social plugin, works as a word filter instance-wide. Can be used to censor slurs and what-not whenever a user posts a notice with such content (happens before it's posted).
 
 ## Install
 
